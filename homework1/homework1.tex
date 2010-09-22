@@ -132,11 +132,14 @@ e \leq \frac{n(n-1)}{2}
 \begin{align*}
 \intertext{It is a given that:}
 \sum_{1}^{n} n & = \frac{(n)(n+1)}{2}
-\intertext{The maximum number of edges in a graph can be expressed as:}
-\sum_{1}^{n-1} n &
-\intertext{Where n is the number of vertices in the graph. Now, insert this maximum into the original equation:}
-\frac{(n)(n+1)}{2} & = \frac{(n)(n+1)}{2}
+\intertext{The maximum degree of any graph occurs when each vertex is connected
+   to every other vertex.  Therefore, the maximum degree for each vertex is 
+   $(V - 1)$, and the sum of the max degree'd vertexes is:}
+\sum_{1}^{n} n-1 = (n)(n-1) \\ 
+\intertext{So, we now know that: }
+n(n-1) & \leq 2e \\
+\frac{n(n-1)}{2} & \leq e \leq \frac{n(n-1)}{2} \\
+\frac{n(n-1)}{2} & \leq \frac{n(n-1)}{2} \\
 \end{align*}
 \end{enumerate}
-
 \end{document}
