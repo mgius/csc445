@@ -131,16 +131,29 @@ e \leq \frac{n(n-1)}{2}
 \]
 
 \begin{align*}
-\intertext{It is a given that:}
-\sum_{1}^{n} n & = \frac{(n)(n+1)}{2}
-\intertext{The maximum degree of any graph occurs when each vertex is connected
-   to every other vertex.  Therefore, the maximum degree for each vertex is 
-   $(V - 1)$, and the sum of the max degree'd vertexes is:}
-\sum_{1}^{n} (n-1) = (n)(n-1) \\ 
-\intertext{So, we now know that: }
-n(n-1) & \leq 2e \\
-\frac{n(n-1)}{2} & \leq e \leq \frac{n(n-1)}{2} \\
-\frac{n(n-1)}{2} & \leq \frac{n(n-1)}{2} \\
+\intertext{Base case $n=2$, a graph with two vertices has 1 edge.}
+e & = 1 \\
+e & \leq \frac{2(2-1)}{2} \\
+1 & \leq 1 \\
+\intertext{Now prove the $n+1$ option. When the $n+1$ vertice is added, it can
+add up to $n$ edges, one for each of the existing vertices.}
+e + n & \leq \frac{(n+1)n}{2} \\
+e + n & \leq \frac{n^2 + n}{2} \\
+e + n & \leq \frac{n^2 + n + n - n}{2} \\
+e + n & \leq \frac{n^2 - n}{2} + \frac{2n}{2} \\
+e + n & \leq \boxed{\frac{n(n-1)}{2}} + n \\
+\intertex{Therefore, by induction:}
+e & \leq \frac{n(n-1)}{2}
+% \intertext{It is a given that:}
+% \sum_{1}^{n} n & = \frac{(n)(n+1)}{2}
+% \intertext{The maximum degree of any graph occurs when each vertex is connected
+%    to every other vertex.  Therefore, the maximum degree for each vertex is 
+%    $(V - 1)$, and the sum of the max degree'd vertexes is:}
+% \sum_{1}^{n} (n-1) = (n)(n-1) \\ 
+% \intertext{So, we now know that: }
+% n(n-1) & \leq 2e \\
+% \frac{n(n-1)}{2} & \leq e \leq \frac{n(n-1)}{2} \\
+% \frac{n(n-1)}{2} & \leq \frac{n(n-1)}{2} \\
 \end{align*}
 
 \item % Problem 5
