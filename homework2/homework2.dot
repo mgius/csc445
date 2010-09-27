@@ -1,0 +1,51 @@
+digraph b {
+   Q1 -> Q2  -> Q3 -> Q4 [label="1"];
+   Q1 -> Q1 [label="0"];
+   Q2 -> Q2 [label="0"];
+   Q3 -> Q3 [label="0"];
+   Q4 -> Q4 [label="1"];
+   Q4 -> Q4 [label="0"];
+   Q4 [shape="doublecircle"];
+}
+
+digraph d {
+   Q1 -> Q2 -> Q3 -> Q4 -> Q4 [label="0"];
+   Q5 -> Q5 [label="0"];
+   Q1 -> Q2 -> Q3 -> Q5 -> Q5 [label="1"];
+   Q4 -> Q4 [label="1"];
+   Q4 [shape="doublecircle"];
+}
+
+digraph i {
+   Q1 -> Q2 [label="1"];
+   Q2 -> Q1 [label="0"];
+   Q2 -> Q1 [label="1"];
+   Q1 -> Q3 [label="0"];
+   Q3 -> Q3 [label="0"];
+   Q3 -> Q3 [label="1"];
+   Q1 [shape="doublecircle"];
+   Q2 [shape="doublecircle"];
+}
+
+digraph g {
+   Q0 -> Q1 -> Q2 -> Q3 -> Q4 -> Q5 -> Q6 -> Q6 [label="0"];
+   Q0 -> Q1 -> Q2 -> Q3 -> Q4 -> Q5 -> Q6 -> Q6 [label="1"];
+   Q0 [shape="doublecircle"];
+   Q1 [shape="doublecircle"];
+   Q2 [shape="doublecircle"];
+   Q3 [shape="doublecircle"];
+   Q4 [shape="doublecircle"];
+   Q5 [shape="doublecircle"];
+}
+
+digraph m {
+   Q1 -> Q2 -> Q2 [label="0"];
+   Q1 -> Q2 -> Q2 [label="1"];
+   Q1 [shape="doublecircle"];
+}
+
+digraph n {
+   Q1 -> Q2 -> Q2 [label="0"];
+   Q1 -> Q2 -> Q2 [label="1"];
+   Q2 [shape="doublecircle"];
+}
