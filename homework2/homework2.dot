@@ -1,51 +1,96 @@
 digraph b {
-   Q1 -> Q2  -> Q3 -> Q4 [label="1"];
-   Q1 -> Q1 [label="0"];
-   Q2 -> Q2 [label="0"];
-   Q3 -> Q3 [label="0"];
-   Q4 -> Q4 [label="1"];
-   Q4 -> Q4 [label="0"];
-   Q4 [shape="doublecircle"];
+   graph [rankdir="LR"];
+
+   b1 -> b2  -> b3 -> b4 [label="1"];
+   b1 -> b1 [label="0"];
+   b2 -> b2 [label="0"];
+   b3 -> b3 [label="0"];
+   b4 -> b4 [label="1"];
+   b4 -> b4 [label="0"];
+   b4 [shape="doublecircle"];
+
+   d1 -> d2 -> d3 -> d4 -> d4 [label="0"];
+   d5 -> d5 [label="0"];
+   d1 -> d2 -> d3 -> d5 -> d5 [label="1"];
+   d4 -> d4 [label="1"];
+   d4 [shape="doublecircle"];
+
+   i1 -> i2 [label="1"];
+   i2 -> i1 [label="0"];
+   i2 -> i1 [label="1"];
+   i1 -> i3 [label="0"];
+   i3 -> i3 [label="0"];
+   i3 -> i3 [label="1"];
+   i1 [shape="doublecircle"];
+   i2 [shape="doublecircle"];
+
+   g0 -> g1 -> g2 -> g3 -> g4 -> g5 -> g6 -> g6 [label="0"];
+   g0 -> g1 -> g2 -> g3 -> g4 -> g5 -> g6 -> g6 [label="1"];
+   g0 [shape="doublecircle"];
+   g1 [shape="doublecircle"];
+   g2 [shape="doublecircle"];
+   g3 [shape="doublecircle"];
+   g4 [shape="doublecircle"];
+   g5 [shape="doublecircle"];
+
+   m1 -> m2 -> m2 [label="0"];
+   m1 -> m2 -> m2 [label="1"];
+   m1 [shape="doublecircle"];
+
+   n1 -> n2 -> n2 [label="0"];
+   n1 -> n2 -> n2 [label="1"];
+   n2 [shape="doublecircle"];
 }
 
-digraph d {
-   Q1 -> Q2 -> Q3 -> Q4 -> Q4 [label="0"];
-   Q5 -> Q5 [label="0"];
-   Q1 -> Q2 -> Q3 -> Q5 -> Q5 [label="1"];
-   Q4 -> Q4 [label="1"];
-   Q4 [shape="doublecircle"];
-}
-
-digraph i {
-   Q1 -> Q2 [label="1"];
-   Q2 -> Q1 [label="0"];
-   Q2 -> Q1 [label="1"];
-   Q1 -> Q3 [label="0"];
-   Q3 -> Q3 [label="0"];
-   Q3 -> Q3 [label="1"];
-   Q1 [shape="doublecircle"];
-   Q2 [shape="doublecircle"];
-}
-
-digraph g {
-   Q0 -> Q1 -> Q2 -> Q3 -> Q4 -> Q5 -> Q6 -> Q6 [label="0"];
-   Q0 -> Q1 -> Q2 -> Q3 -> Q4 -> Q5 -> Q6 -> Q6 [label="1"];
-   Q0 [shape="doublecircle"];
-   Q1 [shape="doublecircle"];
-   Q2 [shape="doublecircle"];
-   Q3 [shape="doublecircle"];
-   Q4 [shape="doublecircle"];
-   Q5 [shape="doublecircle"];
-}
-
-digraph m {
-   Q1 -> Q2 -> Q2 [label="0"];
-   Q1 -> Q2 -> Q2 [label="1"];
-   Q1 [shape="doublecircle"];
-}
-
-digraph n {
-   Q1 -> Q2 -> Q2 [label="0"];
-   Q1 -> Q2 -> Q2 [label="1"];
-   Q2 [shape="doublecircle"];
-}
+// digraph b {
+//    graph [rankdir="LR"]
+//    Q1 -> Q2  -> Q3 -> Q4 [label="1"];
+//    Q1 -> Q1 [label="0"];
+//    Q2 -> Q2 [label="0"];
+//    Q3 -> Q3 [label="0"];
+//    Q4 -> Q4 [label="1"];
+//    Q4 -> Q4 [label="0"];
+//    Q4 [shape="doublecircle"];
+// }
+// 
+// digraph d {
+//    Q1 -> Q2 -> Q3 -> Q4 -> Q4 [label="0"];
+//    Q5 -> Q5 [label="0"];
+//    Q1 -> Q2 -> Q3 -> Q5 -> Q5 [label="1"];
+//    Q4 -> Q4 [label="1"];
+//    Q4 [shape="doublecircle"];
+// }
+// 
+// digraph i {
+//    Q1 -> Q2 [label="1"];
+//    Q2 -> Q1 [label="0"];
+//    Q2 -> Q1 [label="1"];
+//    Q1 -> Q3 [label="0"];
+//    Q3 -> Q3 [label="0"];
+//    Q3 -> Q3 [label="1"];
+//    Q1 [shape="doublecircle"];
+//    Q2 [shape="doublecircle"];
+// }
+// 
+// digraph g {
+//    Q0 -> Q1 -> Q2 -> Q3 -> Q4 -> Q5 -> Q6 -> Q6 [label="0"];
+//    Q0 -> Q1 -> Q2 -> Q3 -> Q4 -> Q5 -> Q6 -> Q6 [label="1"];
+//    Q0 [shape="doublecircle"];
+//    Q1 [shape="doublecircle"];
+//    Q2 [shape="doublecircle"];
+//    Q3 [shape="doublecircle"];
+//    Q4 [shape="doublecircle"];
+//    Q5 [shape="doublecircle"];
+// }
+// 
+// digraph m {
+//    Q1 -> Q2 -> Q2 [label="0"];
+//    Q1 -> Q2 -> Q2 [label="1"];
+//    Q1 [shape="doublecircle"];
+// }
+// 
+// digraph n {
+//    Q1 -> Q2 -> Q2 [label="0"];
+//    Q1 -> Q2 -> Q2 [label="1"];
+//    Q2 [shape="doublecircle"];
+// }
